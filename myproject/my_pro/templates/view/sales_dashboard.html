@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+ <style>
+        .container {
+            background-image: url('https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/5f23506781f54e001deba989.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            min-height: 180vh;
+            color: white;
+            text-align: center;
+            padding: 100px;
+        }
+    </style>
+<div class="container mt-5">
+    <h2 class="text-center text-primary fw-bold">📊 Sales Dashboard</h2>
+
+    <div class="text-end mb-3">
+        <a href="{% url 'add_sales' %}" class="btn btn-success">➕ Add New Sales Record</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>Item Name</th>
+                    <th>Weight</th>
+                    <th>Visibility</th>
+                    <th>MRP</th>
+                    <th>Outlet Size</th>
+                    <th>Outlet Type</th>
+                    <th>Sales Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in sales_data %}
+                <tr>
+                    <td>{{ record.item_name }}</td>
+                    <td>{{ record.item_weight }}</td>
+                    <td>{{ record.item_visibility }}</td>
+                    <td>{{ record.item_mrp }}</td>
+                    <td>{{ record.outlet_size }}</td>
+                    <td>{{ record.outlet_type }}</td>
+                    <td>{{ record.sales_amount }}</td>
+                    <td>{{ record.date }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="8" class="text-center text-muted">No sales records found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
