@@ -1,30 +1,36 @@
-🛒 Sales Forecasting Web App using XGBoost and Django
-A machine learning-powered web application that forecasts sales based on input features. The app is built with Django for the backend and uses XGBoost as the predictive model.
+<h1 align="center">🛒 Sales Forecasting Web App</h1>
+<p align="center">
+  <em>A machine learning-powered web application that forecasts sales using XGBoost and Django</em>
+</p>
 
-🚀 Features
-Predicts sales using a trained XGBoost model
+<hr>
 
-Interactive web interface with Django
+<h2>🚀 Features</h2>
 
-Automatic feature importance visualization
+<ul>
+  <li><strong>ML-Powered:</strong> Predicts sales using a trained <code>XGBoost Regressor</code></li>
+  <li><strong>Django Web App:</strong> Backend powered by Django framework</li>
+  <li><strong>Feature Importance:</strong> Auto-generated plots of feature impact</li>
+  <li><strong>Sales Denormalization:</strong> Uses pre-saved <code>scalers</code> to return original sales values</li>
+  <li><strong>Modern UI:</strong> Responsive interface (supports Dark Knight theme 😎)</li>
+</ul>
 
-Sales denormalization using saved scalers
+<hr>
 
-Modern and responsive UI (can include Dark Knight background theme 😎)
+<h2>🧠 Model Details</h2>
 
-🧠 Model
-Model Used: XGBoost Regressor
+<ul>
+  <li><strong>Model:</strong> XGBoost Regressor</li>
+  <li><strong>Scaler:</strong> MinMaxScaler or StandardScaler (via <code>joblib</code>)</li>
+  <li><strong>Target:</strong> <code>Item_Outlet_Sales</code></li>
+  <li><strong>Features:</strong> Encoded and cleaned dataset columns</li>
+</ul>
 
-Scaler: MinMaxScaler or StandardScaler (loaded from joblib)
+<hr>
 
-Target: Item_Outlet_Sales
+<h2>📁 Project Structure</h2>
 
-Features: Cleaned and encoded columns from the dataset
-
-📁 Project Structure
-sql
-Copy
-Edit
+<pre>
 sales_forecasting/
 ├── app/
 │   ├── templates/
@@ -44,63 +50,52 @@ sales_forecasting/
 ├── utils.py
 ├── requirements.txt
 └── README.md
-⚙️ Setup Instructions
-Clone the Repository
+</pre>
 
-glone the repository
-git clone https://github.com/yourusername/sales-forecasting-app.git
-cd sales-forecasting-app
+<hr>
 
+<h2>⚙️ Setup Instructions</h2>
 
+<ol>
+  <li><strong>Clone the Repository</strong>
+    <pre><code>git clone https://github.com/yourusername/sales-forecasting-app.git
+cd sales-forecasting-app</code></pre>
+  </li>
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies
+  <li><strong>Create & Activate Virtual Environment (optional)</strong>
+    <pre><code>python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate</code></pre>
+  </li>
 
+  <li><strong>Install Dependencies</strong>
+    <pre><code>pip install -r requirements.txt</code></pre>
+  </li>
 
-pip install -r requirements.txt
-Train the Model
+  <li><strong>Run the App</strong>
+    <pre><code>python manage.py runserver</code></pre>
+    Visit: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>
+  </li>
+</ol>
 
-Make sure you have the dataset (e.g., sales_data.csv) and run:
+<hr>
 
+<h2>🖼️ UI Preview</h2>
 
-python train.py
-This will:
+<p align="center">
+  <img src="static/images/dark_knight.jp" alt="Dark Knight UI" width="500">
+</p>
 
-Clean the dataset
+<hr>
 
-Train the XGBoost model
+<h2>🤝 Contributing</h2>
 
-Save the model and scaler with joblib
+<p>Pull requests are welcome! For major changes, open an issue to discuss what you'd like to improve.</p>
 
-Run the Server
+<hr>
 
+<h2>📬 Contact</h2>
 
-python manage.py runserver
-Then go to: http://127.0.0.1:8000/
-
-🖼️ UI Customization
-To change the background of the homepage:
-
-html
-
-<div class="container mt-5" style="background-image: url('/static/images/dark_knight.jpg'); background-size: cover; padding: 20px;">
-📊 Output
-Prediction Output: Displayed on predict.html
-
-Model Evaluation: Mean Squared Error is printed after training
-
-Top Features: Logged and printed during training
-
-✅ Technologies Used
-Python
-
-Django
-
-XGBoost
-
-Pandas, NumPy
-
-HTML/CSS (Bootstrap)
-
-Joblib for saving models
+<p>
+  📧 Email: <a href="mailto:shubhrai598@gmail.com">shubhrai598@gmail.com</a><br>
+  💻 GitHub: <a href="https://github.com/shubh-gitpush" target="_blank">github.com/shubh-gitpush</a>
+</p>
