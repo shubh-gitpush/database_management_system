@@ -82,7 +82,9 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate</code></pre>
 <h2>🖼️ UI Preview</h2>
 
 <p align="center">
-  <img src="static/images/dark_knight.jp" alt="Dark Knight UI" width="500">
+  <img src="Screenshot 2025-05-28 092520.png" alt="Dark Knight UI" width="500">
+   <img src="Screenshot 2025-05-28 092555.png" alt="Dark Knight UI" width="500">
+   <img src="Screenshot 2025-05-28 092630.png" alt="Dark Knight UI" width="500">
 </p>
 
 <hr>
@@ -92,6 +94,7 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate</code></pre>
 <p>Pull requests are welcome! For major changes, open an issue to discuss what you'd like to improve.</p>
 
 <hr>
+
 
 <h2>📬 Contact</h2>
 
